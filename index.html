@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <link data-turbolinks-track="true" href="css/choose-city.css" media="all" rel="stylesheet" />
+
+    <script data-turbolinks-track="true" src="js/jquery.min.js?body=1"></script>
+    <script data-turbolinks-track="true" src="js/configCity.js?body=1"></script>
+    <script data-turbolinks-track="true" src="js/jquery.chooseCity.js?body=1"></script>
+    <script data-turbolinks-track="true" src="js/index.js?body=1"></script>
+
+  </head>
+  <body>
+  
+    <div class="index_container">
+      <div class="index_nav_box">
+        <div class="index_nav">
+          <a href="#" class="btn_right" target="_blank">我是承运商，我要入驻 >></a>
+          <a href="javascript:void(0);" class="nav-item-0 active">找货车</a>
+          <a href="javascript:void(0);" class="nav-item-1">找公司</a>
+        </div>
+        <div class="index_nav_search_box">
+          <!--公路物流-->
+          <div class="index_nav_search" id="nav-container-0" style="">
+            <!--选择控件开始-->
+            <div class="select_more">
+              <input type="text" id="road_leave_city" />
+            </div>
+            <!--选择控件结束-->
+            <img src="images/icon_jg.jpg" style='float: left;' />
+            <!--选择控件开始-->
+            <div class="select_more">
+              <input type="text" id="road_arrive_city" />
+            </div>
+            <!--选择控件结束-->
+            <input type="button" class="btn_search" value="搜索" onclick="RoadQuery();" />
+            <p class="index_prompt"><b id="lineCount">6022</b>条物流线路、<b id="carrierCount">2323</b>家物流承运商供您选择！</p>
+          </div>
+          <!--单号查询-->
+          <div class="index_nav_search" id="nav-container-1" style="display: none">
+            <!--选择控件开始-->
+            <div class="select_more" id="select_no_more" style="z-index: 2; width: 692px" divtype="popmodeldiv" selfid="select_no_more" hideobjid="index_smartMatchResult">
+              <a href="#" class="icon_list"></a>
+              <input type="text" id="expOrderNo" class="inp_grey tipInput" tiptextstring="请输入运单号" responseobject="index_btnSerch" />
+              <div class="select_list" id="index_smartMatchResult" style="width: 692px; display: none">
+              </div>
+            </div>
+            <!--选择控件结束-->
+            <input type="button" class="btn_search" id="index_btnSerch" value="搜索" />
+            <p class="index_prompt">已有<b id="expressCompanyCount">2343</b>家快递/物流公司入驻</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
